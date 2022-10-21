@@ -14,28 +14,12 @@
     <div class="page">
     @@include("chunk/header.html")
     <main class="main-wrap">
-        <section class = "plans-pricing">
-            <h1 class="title">Plans & Pricing</h1>
-            <div class="subtitle-wrap">
-                <div class="subtitle">
-                    <p>Whether your time-saving automation needs are large or small, we’re here to help you scale.</p>
-                </div>
-                <div class="switch">
-                    <button id="btn-monthly" class="btn switch__btn">
-                        MONTHLY
-                    </button>
-                    <button id="btn-yearly" class="btn switch__btn switch__btn-off">
-                        YEARLY
-                    </button>
-                </div>
-            </div>
-        </section>
+        @@include("chunk/description.html")
         @@include("chunk/tariffs-monthly.html")
         @@include("chunk/tariffs-yearly.html")
     </main>
     </div>
-    <!--@@loop("chunk/news-item.html","../../data/news.json")
-    @@include("chunk/footer.html")-->
+ 
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="../js/switcher.js"></script>
