@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Pricing Page</title>
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <div class="page">
+    @@include("chunk/header.html")
+    <main class="main-wrap">
+        <section class = "plans-pricing">
+            <h1 class="title">Plans & Pricing</h1>
+            <div class="subtitle-wrap">
+                <div class="subtitle">
+                    <p>Whether your time-saving automation needs are large or small, we’re here to help you scale.</p>
+                </div>
+                <div class="switch">
+                    <button id="btn-monthly" class="btn switch__btn">
+                        MONTHLY
+                    </button>
+                    <button id="btn-yearly" class="btn switch__btn switch__btn-off">
+                        YEARLY
+                    </button>
+                </div>
+            </div>
+        </section>
+        @@include("chunk/tariffs-monthly.html")
+        @@include("chunk/tariffs-yearly.html")
+    </main>
+    </div>
+    <!--@@loop("chunk/news-item.html","../../data/news.json")
+    @@include("chunk/footer.html")-->
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../js/switcher.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+$base-font-size:15px;
+$font: 'Poppins', sans-serif;
+$title-font-size:40px;
+$subtitle-font-size:18px;
+$tariffs-name-font-size:28px;
+$price-font-size:36px;
+$active-color:#231D4F;
+$button-color:#BB6BD9;
+$active-button-color:#A847CC;
+$text-color:#848199;
+
+
+@mixin small{
+    @media (max-width:414px) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: $base-font-size;
+    font-family:$font;
+    color: $text-color;
+    line-height: 1.5;
+}
+
+.page{
+    height: 900px;
+    background: linear-gradient( #F5F5FA,#F2DAD5,#A0ABD6);
+    @include small(){    
+        height:1890px;
+    }
+}
+
+.title{
+    font-size: 40px;
+    color:$active-color;
+    line-height:60px;
+    font-weight: 400;
+    @include small(){    
+        margin-bottom: 20px;
+    }
+}
+
+.main-wrap{
+    margin-top: 73px;
+    margin-right: 200px;
+    margin-left: 229px;
+    @include small(){    
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+}
+
+.yearly{
+    display: none;
+}
+
+.plans-pricing{
+    margin-bottom: 90px;
+    @include small(){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.subtitle-wrap{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    p{
+        line-height: 27px;
+        width: 584px;
+        @include small(){    
+            width: auto;   
+        }
+    }
+    @include small(){    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.subtitle{
+    @include small(){    
+        margin-bottom: 35px;
+    }
+}
+
+.switch{
+    background-color: white;
+    border-radius: 22px;
+    height: 44px;
+    @include small(){    
+        width: 224px;
+    }
+}
+
+.btn{
+    font-weight: 500;
+    color: white;
+    border:none;
+}
+
+.switch__btn{
+    font-size: 12px;
+    background-color: $button-color;
+    width: 110px;
+    height: 44px;
+    border-radius: 22px;
+    letter-spacing: 0.833333px;
+    
+    &-off{
+        color:$active-color;
+        background-color: white;
+    }
+}
+
+@import "block/*.scss";

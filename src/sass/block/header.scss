@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    @include small(){    
+        padding:32px 24px 0px 27px;
+    }
+    &-logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 137px;
+    }
+
+    
+}
+.join__btn{
+    width:124px;
+    height:38px;
+    background-color: $button-color;
+    border-radius: 25px;
+    @include small(){    
+        display: none;
+    }
+}
